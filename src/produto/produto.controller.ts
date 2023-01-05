@@ -1,4 +1,5 @@
 import { Controller, Post, Body, Get } from "@nestjs/common";
+import { CriaProdutoDTO } from "./dto/CriaProduto.dto";
 import { ProdutoRepository } from "./produto.repository";
 
 @Controller('/produtos')
@@ -8,7 +9,7 @@ export class ProdutoController {
 
 
     @Post()
-    async criaProdutos(@Body() dadosDoProduto) {
+    async criaProdutos(@Body() dadosDoProduto: CriaProdutoDTO) {
         this.produtoRepository.salvar(dadosDoProduto);
         return dadosDoProduto;
 
