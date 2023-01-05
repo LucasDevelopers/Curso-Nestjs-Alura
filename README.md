@@ -71,3 +71,16 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
+Apos o termino da Aula, foi solicitado a criação das DTO do modulo de produtos, onde foi passado algumas regras de validação.
+
+Com isso em mente, crie a validação de criação de produtos. Elas precisam atender aos critérios abaixo:
+
+O nome do produto não pode ser vazio;
+O valor do produto precisa ser um número positivo (não pode ser zero) e ter até duas casas decimais;
+A quantidade precisa ser um número igual ou maior que zero;
+A descrição não pode ser vazia ou maior que 1000 caracteres;
+A lista de características do produto precisa ter pelo menos 3 itens;
+A lista de imagens do produto precisa ter pelo menos 1 item;
+A categoria do produto não pode ser vazia.
