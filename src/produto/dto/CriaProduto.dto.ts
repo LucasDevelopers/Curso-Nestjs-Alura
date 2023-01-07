@@ -1,9 +1,12 @@
 import { Type } from "class-transformer";
-import { IsArray, IsNotEmpty, ValidateNested, IsInt, IsString, IsNumber, MaxLength, IsPositive, Min, ArrayMinSize } from "class-validator";
+import { IsArray, IsNotEmpty, ValidateNested, IsInt, IsString, IsNumber, MaxLength, IsPositive, Min, ArrayMinSize, IsUUID } from "class-validator";
 import { CaracteristicaProdutoDTO } from "./caracProduto.dto";
 import { ImagemProdutoDTO } from "./imagemProduto.dto";
 
 export class CriaProdutoDTO {
+
+    @IsUUID(undefined, { message: "ID do usuário inválido." })
+    usuarioID: string;
 
     @IsNotEmpty()
     nome: string;
