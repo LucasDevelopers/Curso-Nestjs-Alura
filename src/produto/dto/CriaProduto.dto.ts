@@ -5,9 +5,6 @@ import { ImagemProdutoDTO } from "./imagemProduto.dto";
 
 export class CriaProdutoDTO {
 
-    @IsUUID(undefined, { message: "ID do usuário inválido." })
-    usuarioID: string;
-
     @IsNotEmpty()
     nome: string;
 
